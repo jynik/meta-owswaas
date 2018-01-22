@@ -1,0 +1,31 @@
+#!/bin/sh
+
+start() {
+    daemonize /usr/sbin/owswaas /wowz #BTN_GPIO#
+}
+
+stop() {
+    killall owswaas
+}
+
+case "${1}" in
+    start)
+        start
+        ;;
+
+    stop)
+        stop
+        ;;
+
+    restart)
+        stop
+        start
+        ;;
+
+    *)
+        echo "Usage: {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
+exit $?

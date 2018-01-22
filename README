@@ -1,0 +1,40 @@
+This is the meta-owswaas Yocto layer, which implements 
+Owen Wilson Saying "Wow" as a (System-V) Service (OWSWaaS).
+
+You can see a demo of it here:
+https://twitter.com/utkan0s/status/953669143177424897
+
+This layer currently targets the Raspberry Pi Zero, but can easily be adapted
+to other platforms. To start, you'll need to add a BTN_GPIO definition in
+init-owswaas.bb. You may also need to tweak the alsa-state.bbappend.
+
+If you haven't used Yocto before, you can find a quick intro here:
+https://gist.github.com/jynik/dca2b85a04cd48b2e3a9fcb92fa51a65
+
+
+Dependencies
+============
+
+This layer depends on:
+
+  URI: git://git.yoctoproject.org/poky.git
+  layers: meta, meta-poky
+  branch: rocko
+
+  URI: https://github.com/agherzan/meta-raspberrypi.git
+  layers: meta-raspberrypi
+  branch: rocko
+
+  URL: git://git.openembedded.org/meta-openembedded
+  layers: meta-oe, meta-multimedia, meta-networking, meta-python, meta-filesystems
+  branch: rocko
+
+
+Patches
+=======
+
+Please submit patches as pull requests on Github at:
+https://github.com/jynik/meta-owswaas/pulls
+
+Clearly, the highest priority patch right now is ensuring that we have an 
+Owen Wilson Saying "Wow" as a Systemd Service implementation as well.

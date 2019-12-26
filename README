@@ -9,7 +9,7 @@ to other platforms. To start, you'll need to add a BTN_GPIO definition in
 init-owswaas.bb. You may also need to tweak the alsa-state.bbappend.
 
 If you haven't used Yocto before, you can find a quick intro here:
-https://gist.github.com/jynik/dca2b85a04cd48b2e3a9fcb92fa51a65
+https://github.com/jynik/ready-set-yocto
 
 
 Dependencies

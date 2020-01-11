@@ -19,15 +19,15 @@ This layer depends on:
 
   URI: git://git.yoctoproject.org/poky.git
   layers: meta, meta-poky
-  branch: rocko
+  branch: zeus
 
   URI: https://github.com/agherzan/meta-raspberrypi.git
   layers: meta-raspberrypi
-  branch: rocko
+  branch: zeus
 
   URL: git://git.openembedded.org/meta-openembedded
   layers: meta-oe, meta-multimedia, meta-networking, meta-python, meta-filesystems
-  branch: rocko
+  branch: zeus
 
 
 Patches

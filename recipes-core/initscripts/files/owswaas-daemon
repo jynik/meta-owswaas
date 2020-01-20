@@ -1,0 +1,69 @@
+#!/bin/sh
+
+GPIO_BTN=24
+GPIO_SW=23
+GPIO_LED=18
+
+AUDIO_DIR=/audio
+
+init_gpio() {
+    echo ${GPIO_BTN} > /sys/class/gpio/export
+    echo ${GPIO_SW}  > /sys/class/gpio/export
+    echo ${GPIO_LED} > /sys/class/gpio/export
+
+    echo out > /sys/class/gpio/gpio${GPIO_LED}/direction
+    echo 0   > /sys/class/gpio/gpio${GPIO_LED}/value
+
+    echo in  > /sys/class/gpio/gpio${GPIO_BTN}/direction
+    echo in  > /sys/class/gpio/gpio${GPIO_SW}/direction
+
+    echo both > /sys/class/gpio/gpio${GPIO_SW}/edge
+
+    echo falling > /sys/class/gpio/gpio${GPIO_BTN}/edge
+
+    chown root:owswaas /sys/class/gpio/gpio${GPIO_LED}/value
+    chmod g+w /sys/class/gpio/gpio${GPIO_LED}/value
+}
+
+deinit_gpio() {
+    echo ${GPIO_BTN} > /sys/class/gpio/unexport
+    echo ${GPIO_SW}  > /sys/class/gpio/unexport
+    echo ${GPIO_LED} > /sys/class/gpio/unexport
+}
+
+start() {
+    init_gpio
+
+    daemonize -u owswaas /usr/bin/owswaas \
+        -gpio-led ${GPIO_LED} \
+        -gpio-sw ${GPIO_SW} \
+        -gpio-btn ${GPIO_BTN} \
+        -audio-dir ${AUDIO_DIR}
+}
+
+stop() {
+    killall owswaas
+    deinit_gpio
+}
+
+case "${1}" in
+    start)
+        start
+        ;;
+
+    stop)
+        stop
+        ;;
+
+    restart)
+        stop
+        start
+        ;;
+
+    *)
+        echo "Usage: {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
+exit $?

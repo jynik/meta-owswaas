@@ -3,15 +3,7 @@ LICENSE = "MIT"
 
 inherit core-image
 
-OWSWAAS_DIR ??= '/opt/owswaas'
-
-IMAGE_INSTALL += "\
+IMAGE_INSTALL +=  "\
     kernel-modules \
-    init-owswaas \ 
+    owswaas-daemon \
 "
-
-inherit extrausers
-EXTRA_USERS_PARAMS = "\
-    useradd -r -d ${OWSWAAS_DIR} -s /bin/false owswaas; \
-"
-

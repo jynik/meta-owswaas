@@ -19,7 +19,10 @@ Differences in software should only depend upon the platform, the USB speaker
 * **Mounting Materials**: A hodge-podge mix of the following
   * [2-56 Machine Screws (via Radio Shack)](https://www.radioshack.com/products/2-56-round-head-machine-screws?variant=20331813445)
   * [2-56 Hex Nuts (via Radio Shack)](https://www.radioshack.com/products/2-56-hex-nuts?variant=20331811269)
-  * Hot Glue and/or [Sugru](https://sugru.com)
+  * Hot Glue
+  * [Sugru](https://sugru.com) - for purely aesthetic bezel around speaker fabric
+  * Velcro tape - used to hold speaker and speaker fabric in place
+  * [Speaker mesh fabric](https://www.amazon.com/gp/product/B00H3R9S1K)
 * **Single Pole Rotary Switch**: Gardner Bender [GSW-61 (via Home Depot)](https://www.homedepot.com/p/Gardner-Bender-6-Amp-Single-Pole-Rotary-Switch-Brass-GSW-61/100095964)
 * **OWSWAAS RPi "Shield"**
   * 4cm x 6cm, two-sided proto board with 100 mil hole spacing
@@ -34,6 +37,7 @@ Differences in software should only depend upon the platform, the USB speaker
     * Not in the Sparkfun kit, but you can use slighly larger value, or use a series/parallel combo to get close.
   * Qty 4 - 10K Ohm 1/4 Watt resistors - included in [Sparkfun COM-10969](https://www.sparkfun.com/products/10969)
   * Qty 2 - 0.47 uF polarized electrolytic capacitor - Example: [Nichicon UVR2AR47MDD](https://www.digikey.com/product-detail/en/nichicon/UVR2AR47MDD/493-1139-ND/588880)
+  * Qty 1 - 220 uF polarized electrolytic capacitor
   * Your favorite wire and solder 
     * Head over to [Sparkfun](https://www.sparkfun.com), [Adafruit](https://www.adafruit.com), [Digikey](https://www.digikey.com), [Mouser](https://www.mouser.com), etc.
 * **Dome Button w/ LED**: [Sparkfun COM-11275](https://www.sparkfun.com/products/11275)

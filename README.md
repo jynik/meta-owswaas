@@ -4,10 +4,6 @@ Owen Wilson Saying "Wow" as a Service (OWSWaaS).
 You can see a demo of it here:
 https://twitter.com/utkan0s/status/953669143177424897
 
-This layer currently targets the Raspberry Pi Zero (W), but can easily be adapted
-to other platforms. To start, you'll need to add a BTN_GPIO definition in
-init-owswaas.bb. You may also need to tweak the alsa-state.bbappend.
-
 If you haven't used Yocto before, you can find a quick intro here:
 https://github.com/jynik/ready-set-yocto
 
@@ -30,11 +26,21 @@ This layer depends on:
   branch: zeus
 
 
-Patches
-=======
+Configuration Variables
+=======================
 
-Please submit patches as pull requests on Github at:
-https://github.com/jynik/meta-owswaas/pulls
+This layer currently targets the Raspberry Pi Zero (W), but can easily be adapted
+to other platforms by defining variable overrides for the following in your `local.conf`.
+
+*Sysfs GPIO pin assigments*
+
+* `GPIO_BTN = "24"` - Push button
+* `GPIO_SW  = "23"` - SP/ST rotary switch
+* `GPIO_LED = "18"` - LED control (intentionally on RPi PWM pin, though not used as such)
+
+*Default ALSA sound card selection, by index:*
+
+`DEFAULT_ALSA_CARD = "0"`
 
 Hardware
 ========
@@ -42,5 +48,12 @@ Hardware
 This is a fairly simple setup, and makes for a fun beginner/intermediate hobbyist
 electronics project. Information about the hardware components can be found here:
 
-* [Schematic][./doc/owswaas-shield.pdf]
+* [Pictures](./doc/images/)
+* [Schematic](./doc/owswaas-shield.pdf)
 * [Bill of Materials](./doc/BOM.md)
+
+Patches
+=======
+
+Please submit patches as pull requests on Github at:
+https://github.com/jynik/meta-owswaas/pulls

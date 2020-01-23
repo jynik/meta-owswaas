@@ -1,5 +1,7 @@
 This is the meta-owswaas Yocto layer, which implements 
-Owen Wilson Saying "Wow" as a Service (OWSWaaS).
+Owen Wilson Saying "Wow" as a Service (OWSWaaS) on this hot mess:
+
+<img src="doc/images/assembled-speaker.png" height="300"><img src="doc/images/assembled-rotswitch.png" height="300">
 
 You can see a demo of it here:
 https://twitter.com/utkan0s/status/953669143177424897

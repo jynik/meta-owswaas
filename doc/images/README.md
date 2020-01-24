@@ -1,10 +1,6 @@
-### Top of "shield", sans 220 uF bulk capacitor
+### OWSWaaS "shield", sans 220 uF bulk capacitor
 
-<img src="/doc/images/shield_top_sans_bulk_cap.png" width="400">
-
-### Bottom of "shield", sans 220 uF bulk capacitor
-
-<img src="/doc/images/shield_top_sans_bulk_cap.png" width="400">
+<img src="/doc/images/shield_top_sans_bulk_cap.png" height="400"><img src="/doc/images/shield_bot_sans_bulk_cap.png" height="400">
 
 ### Retrofitting 5 "super bright" LEDs into button dome
 

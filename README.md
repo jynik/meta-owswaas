@@ -50,7 +50,7 @@ This is a fairly simple setup, and makes for a fun beginner/intermediate hobbyis
 electronics project. Information about the hardware components can be found here:
 
 * [Pictures](./doc/images/)
-* [Schematic](./doc/owswaas-shield.pdf)
+* [Schematic](./doc/kicad/owswaas-shield.pdf)
 * [Bill of Materials](./doc/BOM.md)
 
 Patches

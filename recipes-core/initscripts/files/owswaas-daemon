@@ -5,6 +5,7 @@ GPIO_SW=23
 GPIO_LED=18
 
 AUDIO_DIR=/audio
+CONF_FILE=${AUDIO_DIR}/owswaas.conf
 
 init_gpio() {
     echo ${GPIO_BTN} > /sys/class/gpio/export
@@ -32,6 +33,10 @@ deinit_gpio() {
 
 start() {
     init_gpio
+
+	if [ ! -f ${CONF_FILE} ]; then
+		echo 'volume = 65' > ${CONF_FILE} && chown owswaas:audio ${CONF_FILE}
+	fi
 
     daemonize -u owswaas /usr/bin/owswaas \
         -gpio-led ${GPIO_LED} \

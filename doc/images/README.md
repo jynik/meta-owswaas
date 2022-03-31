@@ -2,6 +2,8 @@
 
 <img src="/doc/images/shield_top_sans_bulk_cap.png" height="400"><img src="/doc/images/shield_bot_sans_bulk_cap.png" height="400">
 
+See [owswaas-shield.pdf](../kicad/owswaas-shield.pdf) for the schematic.
+
 ### Retrofitting 5 "super bright" LEDs into button dome
 
 Not shown: Replacing the plastic diffuser with one made out of hot glue and green transparent filter paper.
